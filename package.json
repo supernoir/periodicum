@@ -1,0 +1,30 @@
+{
+  "name": "periodicum",
+  "version": "0.0.1",
+  "description": "Interactive Periodic Table App... thingy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supernoir/periodicum.git"
+  },
+  "keywords": [
+    "periodic",
+    "table",
+    "app",
+    "interactive",
+    "node"
+  ],
+  "author": "conkat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supernoir/periodicum/issues"
+  },
+  "homepage": "https://github.com/supernoir/periodicum#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node": "0.0.0"
+  }
+}
