@@ -79,13 +79,24 @@
 </div>
 </div>
 
+<div id="myDiv"></div>
 
     <div id="mount-point"></div>
 <script type="text/jsx">
  /** @jsx React.DOM */
-    React.render(
-        <h1>Hello, world!</h1>
-    );
+ 
+var MyComponent = React.createClass({
+    render: function(){
+        return (
+            <h1>Hello, world!</h1>
+        );
+    }
+});
+
+React.render(
+    <MyComponent/>,
+    document.getElementById('myDiv')
+);
 </script>
 <script src="app.js"></script>
   </body>
