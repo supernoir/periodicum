@@ -24,8 +24,22 @@
   },
   "homepage": "https://github.com/supernoir/periodicum#readme",
   "dependencies": {
+    "bulma": "0.0.16",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
-    "node": "0.0.0"
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1",
+    "node": "0.0.0",
+    "tiny-lr": "^0.2.1"
   }
 }

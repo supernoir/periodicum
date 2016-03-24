@@ -3,14 +3,90 @@
   <head>
     <script src="https://fb.me/react-0.14.7.js"></script>
     <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.16/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
+      <header class="header">
+  <div class="container">
+    <!-- Left side -->
+    <div class="header-left">
+      <a class="header-item" href="#">
+        <h1 class="title">PERIODICUM</h1>
+      </a>
+      <a class="header-tab" href="#">
+        Start
+      </a>
+      <a class="header-tab is-active" href="#">
+        Elements
+      </a>
+      <a class="header-tab" href="#">
+        About
+      </a>
+    </div>
+
+    <!-- Hamburger menu (on mobile) -->
+    <span class="header-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <!-- Right side -->
+    <div class="header-right header-menu">
+      <span class="header-item">
+        <a href="#">Nav item</a>
+      </span>
+      <span class="header-item">
+        <a href="#">Other nav item</a>
+      </span>
+      <span class="header-item">
+        <a class="button" href="#">Button</a>
+      </span>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container is-fluid">
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Nursery_of_New_Stars_-_GPN-2000-000972.jpg" width="300" alt="">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-32x32">
+          <img src="http://placehold.it/64x64" alt="Image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">Hydrogen</p>
+        <p class="subtitle is-6">1 Atom</p>
+      </div>
+    </div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>.
+      <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <small>11:09 PM - 1 Jan 2016</small>
+    </div>
+  </div>
+</div>
+</div>
+
+
     <div id="mount-point"></div>
-    <script type="text/jsx">
-       React.render(
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    React.render(
         <h1>Hello, world!</h1>,
         document.getElementById('myDiv')
     );
-    </script>
+</script>
+
   </body>
 </html>
