@@ -25,6 +25,7 @@
   "homepage": "https://github.com/supernoir/periodicum#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "gulp": "^3.9.1",
     "node": "0.0.0"
   }
 }

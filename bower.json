@@ -1,0 +1,26 @@
+{
+  "name": "periodicum",
+  "description": "Interactive Periodic Table App... thingy",
+  "main": "app.js",
+  "authors": [
+    "conkat"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "periodic",
+    "table",
+    "app",
+    "interactive",
+    "node"
+  ],
+  "homepage": "https://github.com/supernoir/periodicum",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
