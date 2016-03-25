@@ -11,6 +11,8 @@ var nano = require('nano')('http://localhost:5984'),
 // --- DB Driver
 var periodicum = nano.db.use('periodicum');
 
+
+// --- 
 app.get('/', function(request, response) {
 
 periodicum.list(params, function(err, body) {
@@ -26,7 +28,7 @@ periodicum.list(params, function(err, body) {
 
 
 // --- Listening
-var port = 8787;
+var port = process.env.PORT || 8080;
 app.listen(port);
 console.log("Server is running at port " + port);
 
