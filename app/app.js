@@ -1,35 +1,37 @@
 'use strict'
 
-var myJSON = [
-    {"name":"Aurum","symbol":"Au"},
-    {"name":"Hydrogen","symbol":"H"}
-    ];
+var items = [
+ { name: 'Hydrogen', symbol: 'H' },
+ { name: 'Magnesium', symbol: 'Mg' },
+ { name: 'Aurum', commonname: 'Gold', symbol: 'Au' },
+ { name: 'Uranium', symbol: 'U' }
+];
 
+var RepeatModule = React.createClass({
+ getDefaultProps: function() {
+  return { items: [] }
+ },
+ render: function() {
 
-
-
-var TheElement = React.createClass({
-  render: function() {
-    return (
-      <div className="TheElement">
-        <div className="card">
-            <div className="card-content">
-                <div className="content">
-                { this.props.allElements.map(function(item) {
-                    return <div>{item}</div>
-                    })
-                }
-                </div>
-            </div>
+  var listItems = this.props.items.map(function(item) {
+   return (
+    <div className="card">
+        <div className="card-content">
+            <p className="title is-1" key={item.symbol}>{item.symbol}</p>
+            <p className="title is-3" key={item.name}>{item.name}</p>
+            <p className="subtitle is-3" key={item.commonname}>{item.commonname}</p>
         </div>
-      </div>
-    );
-  }
+    </div>
+   );
+  });
+
+  return (
+   <div className='elementModule' >
+     {listItems}
+   </div>
+  );
+ }
 });
 
-var allElements = ["Aurum","Magnesium","Hydrogen"];
-
-ReactDOM.render(
-  <TheElement allElements={ allElements }/>,
-  document.getElementById('ElementComponent')
-);
+ReactDOM.render(<RepeatModule items={items} />,     
+ document.getElementById('react-content'));
