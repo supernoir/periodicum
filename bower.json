@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "babel": "*"
+    "babel": "*",
+    "react": "^0.14.8"
   }
 }
