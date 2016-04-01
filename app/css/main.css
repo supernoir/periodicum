@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Iceland);
+body {
+  margin: 0px;
+  padding: 0px;
+  background: whitesmoke;
+  font-family: 'Roboto','Helvetica','Arial', sans-serif; }
+
+.header {
+  width: 100%;
+  background: rgba(50, 200, 200, 0.5);
+  margin: 0px;
+  padding: 5px 20px; }
+
+#logo {
+  font-family: "Iceland", sans-serif;
+  color: #009696;
+  font-weight: 100; }
+
+p {
+  font-size: 9px; }
+
+p.symbol {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 600; }
+
+p.atomic-number {
+  font-size: 0.8em;
+  line-height: 0.8em;
+  font-weight: 400; }
+
+.container {
+  margin: 20px; }
+
+.periodic-table {
+  border-radius: 5px;
+  background-color: rgba(180, 180, 180, 0.2); }
+
+.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 5px; }
+
+.element {
+  border-radius: 5px;
+  min-width: 40px;
+  min-height: 40px;
+  background: white;
+  margin: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#alkaline-earth {
+  color: #32c8fa;
+  border-bottom: 1px solid #32c8fa; }
