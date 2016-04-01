@@ -12,12 +12,14 @@ var nano = require('nano')('http://localhost:5984'),
 var periodicum = nano.db.use('periodicum');
 
 
-// --- 
+// ---
+app.use('/public', express.static(process.cwd() + '/public'));
+
 app.get('/', function(request, response) {
 
 periodicum.list(params, function(err, body) {
     var docs = [];
-    
+
     body.rows.forEach(function(doc) {
         docs.push(doc);
     });
