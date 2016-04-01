@@ -26,7 +26,6 @@ periodicum.list(params, function(err, body) {
 });
 
 
-
 // --- Listening
 var port = process.env.PORT || 8787;
 app.listen(port);
