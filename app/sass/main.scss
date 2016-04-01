@@ -16,29 +16,47 @@ $actinide: rgb(200,250,50);
 //-- GENERAL
 body {
     margin: 0px;
-    padding: 0px;    
-    background: rgb(245,245,245);
-    font-family: 'Roboto','Helvetica','Arial', sans-serif;
+    padding: 0px;
+    height: 100%;  
+    font-family: 'Helvetica Neue','Helvetica','Arial', sans-serif;
 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    background: rgb(50,150,150);
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient( to left top, rgb(50,150,150), rgb(100,200,200));
+    background: -moz-linear-gradient( to left top, rgb(50,150,150), rgb(100,200,200));
+    background: -ms-linear-gradient( to left top, rgb(50,150,150), rgb(100,200,200));
+    background: -o-linear-gradient( to left top, rgb(50,150,150), rgb(100,200,200));
+    background: linear-gradient( to left top, rgb(50,150,150), rgb(100,200,200));
 }
 
 .header{
     width: 100%;
-    background: rgba(50,200,200,0.5);
+    background: rgb(255,255,255);
     margin: 0px;
     padding: 5px 20px;
 }
 
 #logo{
-    font-family: "Iceland", sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     color: rgb(0,150,150);
     font-weight: 100;
 }
 
 p{
+    font-weight: 200;
     font-size: 9px;
 }
 
+a{
+    font-weight: 300;
+    color: rgb(50,50,50);
+    text-decoration: none;
+}
 
 
 p.symbol {
@@ -59,7 +77,8 @@ p.atomic-number {
 
 .periodic-table{
 border-radius: 5px;
-background-color: rgba(180,180,180,0.2);
+background-color: rgba(0,0,0,0.1);
+margin: 5px;
 }
 
 .row {

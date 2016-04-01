@@ -3,22 +3,32 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: whitesmoke;
-  font-family: 'Roboto','Helvetica','Arial', sans-serif; }
+  height: 100%;
+  font-family: 'Helvetica Neue','Helvetica','Arial', sans-serif;
+  background-size: cover;
+  background: #329696;
+  background-repeat: no-repeat;
+  background: linear-gradient(to left top, #329696, #64c8c8); }
 
 .header {
   width: 100%;
-  background: rgba(50, 200, 200, 0.5);
+  background: white;
   margin: 0px;
   padding: 5px 20px; }
 
 #logo {
-  font-family: "Iceland", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   color: #009696;
   font-weight: 100; }
 
 p {
+  font-weight: 200;
   font-size: 9px; }
+
+a {
+  font-weight: 300;
+  color: #323232;
+  text-decoration: none; }
 
 p.symbol {
   font-size: 1.2em;
@@ -35,7 +45,8 @@ p.atomic-number {
 
 .periodic-table {
   border-radius: 5px;
-  background-color: rgba(180, 180, 180, 0.2); }
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 5px; }
 
 .row {
   display: -webkit-flex;
