@@ -60,9 +60,9 @@ p.atomic-number {
           flex-wrap: wrap;
   margin: 5px; }
 
-.element {
+a.element {
   border-radius: 5px;
-  min-width: 40px;
+  min-width: 60px;
   min-height: 40px;
   background: white;
   margin: 5px;
@@ -74,8 +74,23 @@ p.atomic-number {
           flex-direction: column;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  border: 2px solid #fff; }
 
 #alkaline-earth {
-  color: #32c8fa;
-  border-bottom: 1px solid #32c8fa; }
+  color: #32c8fa; }
+
+#transition-metal {
+  color: #3264fa; }
+
+#alkali-metal {
+  color: #32fac8; }
+
+#non-metal {
+  color: #c832fa; }
+
+#noble-gas {
+  color: #963232; }
+
+a:hover.element {
+  border: 2px solid #06b8f3; }

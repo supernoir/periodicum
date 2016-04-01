@@ -12,7 +12,6 @@ $noble-gas: rgb(150,50,50);
 $lanthanide: rgb(250,100,50);
 $actinide: rgb(200,250,50);
 
-
 //-- GENERAL
 body {
     margin: 0px;
@@ -88,23 +87,41 @@ margin: 5px;
     margin: 5px;
 }
 
-.element {
+a.element {
     border-radius: 5px;
-    min-width: 40px;
+    min-width: 60px;
     min-height: 40px;
-    
     background: rgb(255,255,255);
     margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #fff;
 }
 
 #alkaline-earth {
     color: $alkaline-earth;
-    border-bottom: 1px solid $alkaline-earth;
 }
 
+#transition-metal {
+    color: $transition-metal;
+}
+
+#alkali-metal{
+    color: $alkali-metal;
+}
+
+#non-metal{
+    color: $non-metal;
+}
+
+#noble-gas {
+    color: $noble-gas;
+}
+
+a:hover.element {
+    border: 2px solid darken($alkaline-earth,10%);
+}
 
 .filter {
 }
