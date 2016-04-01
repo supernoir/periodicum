@@ -92,5 +92,8 @@ a.element {
 #noble-gas {
   color: #963232; }
 
+#metalloid {
+  color: #9664c8; }
+
 a:hover.element {
   border: 2px solid #06b8f3; }

@@ -11,6 +11,7 @@ $halogen: rgb(250,200,50);
 $noble-gas: rgb(150,50,50);
 $lanthanide: rgb(250,100,50);
 $actinide: rgb(200,250,50);
+$metalloid: rgb(150,100,200);
 
 //-- GENERAL
 body {
@@ -117,6 +118,10 @@ a.element {
 
 #noble-gas {
     color: $noble-gas;
+}
+
+#metalloid{
+    color: $metalloid;
 }
 
 a:hover.element {
