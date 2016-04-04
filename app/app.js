@@ -39,7 +39,7 @@ var ElementList = React.createClass({
       );
     });
     return (
-      <div className="elementList">
+      <div className="row">
         {elementNodes}
       </div>
     );
@@ -49,10 +49,10 @@ var ElementList = React.createClass({
 var Element = React.createClass({
   render: function() {
     return (
-      <a class="element" id={this.props.group}>
-        <p class="symbol">{this.props.symbol}</p>
-        <p class="atomic-number">{this.props.number}</p>
-        <p class="name">{this.props.name}</p>
+      <a className="element" id={this.props.group}>
+        <p className="symbol">{this.props.symbol}</p>
+        <p className="atomic-number">{this.props.number}</p>
+        <p className="name">{this.props.name}</p>
       </a>
     );
   }
