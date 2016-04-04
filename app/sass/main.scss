@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Unica+One:400);
 
 $primary-color: rgb(0,100,250);
@@ -109,7 +108,7 @@ padding: 5px;
 .row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: no-wrap; 
     margin: 5px;
 }
 
