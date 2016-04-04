@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Unica+One:400);
 
-$base-color: rgb(200,200,200);
+$primary-color: rgb(0,100,250);
+$secondary-color: rgb(200,200,200);
+
 $alkali-metal: rgb(100,200,100);
 $alkaline-earth: rgb(50,200,250);
 $transition-metal: rgb(50,100,250);
@@ -9,12 +11,13 @@ $semi-metal: rgb(100,50,250);
 $non-metal: rgb(200,50,250);
 $basic-metal: rgb(50,150,150);
 $halogen: rgb(250,200,50);
-$noble-gas: rgb(150,50,50);
+$noble-gas: rgb(150,50,150);
 $lanthanide: rgb(250,100,50);
 $actinide: rgb(200,250,50);
 $metalloid: rgb(150,100,200);
 
 //-- GENERAL
+html,
 body {
     margin: 0px;
     padding: 0px;
@@ -50,11 +53,12 @@ body {
 }
 
 #logo{
-    color: $base-color;
+    color: $primary-color;
     font-weight: 300;
 }
 
 #subhead{
+    color: $secondary-color;
     display: inline;
     font-weight: 100;
 }
@@ -98,8 +102,8 @@ p.name {
 
 .periodic-table{
 border-radius: 5px;
-background-color: rgba(0,0,0,0.1);
-margin: 5px;
+background-color: rgba(255,255,255,0.5);
+padding: 5px;
 }
 
 .row {
@@ -115,6 +119,7 @@ a.element {
     min-height: 40px;
     background: rgb(255,255,255);
     margin: 5px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,38 +128,34 @@ a.element {
 }
 
 #alkaline-earth {
-    color: $alkaline-earth;
-    background: rgba($alkaline-earth,0.1);
+    color: darken($alkaline-earth,20%);
 }
 
 #transition-metal {
-    color: $transition-metal;
-    background: rgba($transition-metal,0.1);
+    color: darken($transition-metal,20%);
 }
 
 #alkali-metal{
     color: darken($alkali-metal,20%);
-    background: rgba($alkali-metal,0.1);
 }
 
 #non-metal{
     color: darken($non-metal,20%);
-    background: rgba($non-metal,0.1);
 }
 
-#noble-gas {
+#noble-gas{
     color: darken($noble-gas,20%);
-    //background: rgba($noble-gas,0.1);
 }
 
 #metalloid{
-    color: $metalloid;
+    color: darken($metalloid,20%);
 }
 
 a:hover.element {
     border: 1px solid white;
-    background: rgba(0,0,0,0.4) !important;
+    background: rgba($primary-color,0.7) !important;
     color: white !important;
+    
 }
 
 .filter {
