@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Unica+One:400);
 
-$primary-color: rgb(0,100,250);
+$primary-color: rgb(50,150,150);
 $secondary-color: rgb(200,200,200);
+$tertiary-color: rgb(50,50,50);
 
 $alkali-metal: rgb(100,200,100);
 $alkaline-earth: rgb(50,200,250);
@@ -44,13 +45,6 @@ body {
     padding: 5px 20px;
 }
 
-.hr {
-    border: 0px;
-    height: 1px;
-    background-color: rgba(0,0,0,0.1);
-    margin: 10px;
-}
-
 #logo{
     color: $primary-color;
     font-weight: 300;
@@ -67,11 +61,58 @@ p{
     font-size: 9px;
 }
 
-a{
-    font-weight: 300;
-    color: rgb(50,50,50);
+a.button{
+    font-weight: 400;
+    color: $primary-color;
     text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
 }
+
+a:hover.button{
+    color: white;
+    background: $primary-color;
+}
+
+form.filter-form{
+    display: inline;
+    color: $primary-color;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+}
+
+// FILTER with Checkboxes
+
+input.filter-input {
+    display: none;
+}
+
+label.filter-input {
+  cursor: pointer;
+}
+
+input.filter-input:not(:checked) +
+label.filter-input:before {
+    content: "\f070";
+    font-family: FontAwesome;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 0.2em;
+}
+
+input.filter-input:checked +
+label.filter-input:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 0.2em;   
+}
+
 
 
 p.symbol {
@@ -101,7 +142,7 @@ p.name {
 
 .periodic-table{
 border-radius: 5px;
-background-color: rgba(255,255,255,0.5);
+background-color: rgba(255,255,255,0.4);
 padding: 5px;
 }
 
@@ -158,4 +199,8 @@ a:hover.element {
 }
 
 .filter {
+border-radius: 4px;
+background-color: rgba(255,255,255,0.6);
+padding: 24px 10px;
+margin-bottom: 10px;
 }

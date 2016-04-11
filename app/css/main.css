@@ -16,14 +16,8 @@ body {
   margin: 0px;
   padding: 5px 20px; }
 
-.hr {
-  border: 0px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 10px; }
-
 #logo {
-  color: #0064fa;
+  color: #329696;
   font-weight: 300; }
 
 #subhead {
@@ -35,10 +29,48 @@ p {
   font-weight: 200;
   font-size: 9px; }
 
-a {
-  font-weight: 300;
-  color: #323232;
-  text-decoration: none; }
+a.button {
+  font-weight: 400;
+  color: #329696;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #329696; }
+
+a:hover.button {
+  color: white;
+  background: #329696; }
+
+form.filter-form {
+  display: inline;
+  color: #329696;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #329696; }
+
+input.filter-input {
+  display: none; }
+
+label.filter-input {
+  cursor: pointer; }
+
+input.filter-input:not(:checked) +
+label.filter-input:before {
+  content: "\f070";
+  font-family: FontAwesome;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 0.2em; }
+
+input.filter-input:checked +
+label.filter-input:before {
+  content: "\f06e";
+  font-family: FontAwesome;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 0.2em; }
 
 p.symbol {
   font-size: 22px;
@@ -63,7 +95,7 @@ p.name {
 
 .periodic-table {
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 5px; }
 
 .row {
@@ -116,5 +148,11 @@ a.element {
 
 a:hover.element {
   border: 1px solid white;
-  background: rgba(0, 100, 250, 0.7) !important;
+  background: rgba(50, 150, 150, 0.7) !important;
   color: white !important; }
+
+.filter {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 24px 10px;
+  margin-bottom: 10px; }
