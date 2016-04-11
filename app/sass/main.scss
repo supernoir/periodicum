@@ -21,21 +21,9 @@ html,
 body {
     margin: 0px;
     padding: 0px;
-    height: 100%;  
+    height: 100%;
     font-family: 'Helvetica Neue','Helvetica','Arial', sans-serif;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-    background: rgb(50,150,150);
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient( to left top, rgb(180,180,180), rgb(230,230,230));
-    background: -moz-linear-gradient( to left top,  rgb(180,180,180), rgb(230,230,230));
-    background: -ms-linear-gradient( to left top,  rgb(180,180,180), rgb(230,230,230));
-    background: -o-linear-gradient( to left top,  rgb(180,180,180), rgb(230,230,230));
-    background: linear-gradient( to left top,  rgb(180,180,180), rgb(230,230,230));
+    background: $secondary-color;
 }
 
 .header{
@@ -110,7 +98,7 @@ label.filter-input:before {
     font-family: FontAwesome;
     text-decoration: none;
     font-size: 18px;
-    padding-right: 0.2em;   
+    padding-right: 0.2em;
 }
 
 
@@ -130,41 +118,55 @@ p.atomic-number {
 }
 
 p.name {
-    font-size: 12px;
+    font-size: 11px;
     height: 12px;
     font-weight: 200;
     margin: 2px 2px 10px 2px;
 }
 
 .container {
- margin: 20px;
+    width: 1260px;
+    padding: 20px;
 }
 
-.periodic-table{
-border-radius: 5px;
-background-color: rgba(255,255,255,0.4);
-padding: 5px;
+.periodic-table {
+    width: 1200px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 5px;
+    margin: 0 auto;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    flex-wrap: no-wrap; 
+    flex-wrap: no-wrap;
     margin: 5px;
 }
 
 a.element {
+    box-sizing: border-box;
     border-radius: 2px;
-    min-width: 60px;
-    min-height: 40px;
+    width: 63px;
+    max-width: 63px;
+    margin-right: 5px;
+    height: 80px;
     background: rgb(255,255,255);
-    margin: 5px;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid #fff;
     box-shadow: 0px 2px 2px rgba(50,50,50,0.1);
+}
+
+a.empty {
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+}
+
+.spacer {
+    height: 20px;
 }
 
 #alkaline-earth {
@@ -195,7 +197,7 @@ a:hover.element {
     border: 1px solid white;
     background: rgba($primary-color,0.7) !important;
     color: white !important;
-    
+
 }
 
 .filter {

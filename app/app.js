@@ -38,9 +38,51 @@ var ElementList = React.createClass({
         </Element>
       );
     });
+
+    var empty_field = <a className="element empty"></a>;
+    var empty_fields = [];
+    for (var i = 0; i < 20; i++) {
+      empty_fields.push(empty_field);
+    }
+
     return (
-      <div className="row">
-        {elementNodes}
+      <div className="periodic-table">
+        <div className="row one">
+          {elementNodes.slice(0,1)}
+          {empty_fields.slice(0,16)}
+          {elementNodes.slice(1,2)}
+        </div>
+        <div className="row two">
+          {elementNodes.slice(2,4)}
+          {empty_fields.slice(0,10)}
+          {elementNodes.slice(4,10)}
+        </div>
+        <div className="row three">
+          {elementNodes.slice(10,12)}
+          {empty_fields.slice(0,10)}
+          {elementNodes.slice(12,18)}
+        </div>
+        <div className="row four">
+          {elementNodes.slice(18,36)}
+        </div>
+        <div className="row five">
+          {elementNodes.slice(36,54)}
+        </div>
+        <div className="row six">
+          {elementNodes.slice(54,57)}
+          {elementNodes.slice(57,72)}
+        </div>
+        <div className="row seven">
+          {elementNodes.slice(72,75)}
+          {elementNodes.slice(75,90)}
+        </div>
+        <div className="spacer"></div>
+        <div className="row lanthanide">
+          {elementNodes.slice(90,105)}
+        </div>
+        <div className="row actinide">
+          {elementNodes.slice(105)}
+        </div>
       </div>
     );
   }

@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-      <header class="header">
-          <h1 id="logo">Periodicum <span id="subhead">Table of Elements</span></h1>
-      </header>
-<div class="container">
-    <div class="filter">
+    <header class="header">
+        <h1 id="logo">Periodicum <span id="subhead">Table of Elements</span></h1>
+    </header>
+
+    <div class="container">
+      <div class="filter">
         <i class="fa fa-anchor" aria-hidden="true"></i><a href="#" class="button">All Elements</a><form class="filter-form"><input type="checkbox" name="elementgroup" value="noble-gases" class="filter-input" id="element-filter" /><label for="element-filter" class="filter-input"><span class="checker"></span>Noble Gases</label></form>
+      </div>
+
+      <div id="react-content"></div>
     </div>
-    <div class="periodic-table">
-    <div id="react-content"></div>   
-    </div>
-    
-</div>
-<!-- bower:js -->
-<script src="/bower_components/react/react.js"></script>
-<script src="/bower_components/react/react-dom.js"></script>
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<!-- endbower -->
-<script src="app.js" type="text/babel"></script>
+
+    <!-- bower:js -->
+    <script src="/bower_components/react/react.js"></script>
+    <script src="/bower_components/react/react-dom.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <script src="app.js" type="text/babel"></script>
   </body>
 </html>
