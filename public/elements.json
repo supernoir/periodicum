@@ -1,6 +1,6 @@
 [
 	{
-		"group": "",
+		"group": "diatomic-nonmetal",
 		"position": 0,
 		"name": "Hydrogen",
 		"number": 1,
@@ -34,7 +34,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Beryllium",
 		"number": 4,
@@ -58,7 +58,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "polyatomic-nonmetal",
 		"position": 13,
 		"name": "Carbon",
 		"number": 6,
@@ -70,7 +70,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "diatomic-nonmetal",
 		"position": 14,
 		"name": "Nitrogen",
 		"number": 7,
@@ -82,7 +82,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "diatomic-nonmetal",
 		"position": 15,
 		"name": "Oxygen",
 		"number": 8,
@@ -94,7 +94,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "diatomic-nonmetal",
 		"position": 16,
 		"name": "Fluorine",
 		"number": 9,
@@ -131,7 +131,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Magnesium",
 		"number": 12,
@@ -144,7 +144,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 12,
 		"name": "Aluminium",
 		"number": 13,
@@ -170,7 +170,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "polyatomic-nonmetal",
 		"position": 14,
 		"name": "Phosphorus",
 		"number": 15,
@@ -183,7 +183,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "polyatomic-nonmetal",
 		"position": 15,
 		"name": "Sulfur",
 		"number": 16,
@@ -196,7 +196,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "diatomic-nonmetal",
 		"position": 16,
 		"name": "Chlorine",
 		"number": 17,
@@ -236,7 +236,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Calcium",
 		"number": 20,
@@ -390,7 +390,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 12,
 		"name": "Gallium",
 		"number": 31,
@@ -432,7 +432,7 @@
 		]
 	},
 	{
-		"group": "non-metal",
+		"group": "polyatomic-nonmetal",
 		"position": 15,
 		"name": "Selenium",
 		"number": 34,
@@ -446,7 +446,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "diatomic-nonmetal",
 		"position": 16,
 		"name": "Bromine",
 		"number": 35,
@@ -489,7 +489,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Strontium",
 		"number": 38,
@@ -653,7 +653,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 12,
 		"name": "Indium",
 		"number": 49,
@@ -668,7 +668,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 13,
 		"name": "Tin",
 		"number": 50,
@@ -713,7 +713,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "diatomic-nonmetal",
 		"position": 16,
 		"name": "Iodine",
 		"number": 53,
@@ -759,7 +759,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Barium",
 		"number": 56,
@@ -926,7 +926,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 12,
 		"name": "Thallium",
 		"number": 81,
@@ -942,7 +942,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 13,
 		"name": "Lead",
 		"number": 82,
@@ -958,7 +958,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 14,
 		"name": "Bismuth",
 		"number": 83,
@@ -974,7 +974,7 @@
 		]
 	},
 	{
-		"group": "metalloid",
+		"group": "post-transition-metal",
 		"position": 15,
 		"name": "Polonium",
 		"number": 84,
@@ -990,7 +990,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "metalloid",
 		"position": 16,
 		"name": "Astatine",
 		"number": 85,
@@ -1039,7 +1039,7 @@
 		]
 	},
 	{
-		"group": "alkaline-earth",
+		"group": "alkaline-earth-metal",
 		"position": 1,
 		"name": "Radium",
 		"number": 88,
@@ -1056,7 +1056,7 @@
 		]
 	},
 	{
-		"group": "actinid",
+		"group": "actinide",
 		"position": 2,
 		"name": "",
 		"number": "",
@@ -1148,7 +1148,7 @@
 		]
 	},
 	{
-		"group": "transition-metal",
+		"group": "unknown",
 		"position": 8,
 		"name": "Meitnerium",
 		"number": 109,
@@ -1165,7 +1165,7 @@
 		]
 	},
 	{
-		"group": "transition-metal",
+		"group": "unknown",
 		"position": 9,
 		"name": "Darmstadtium",
 		"number": 110,
@@ -1182,7 +1182,7 @@
 		]
 	},
 	{
-		"group": "transition-metal",
+		"group": "unknown",
 		"position": 10,
 		"name": "Roentgenium",
 		"number": 111,
@@ -1216,7 +1216,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "unknown",
 		"position": 12,
 		"name": "Ununtrium",
 		"number": 113,
@@ -1233,7 +1233,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "post-transition-metal",
 		"position": 13,
 		"name": "Flerovium",
 		"number": 114,
@@ -1250,7 +1250,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "unknown",
 		"position": 14,
 		"name": "Ununpentium",
 		"number": 115,
@@ -1267,7 +1267,7 @@
 		]
 	},
 	{
-		"group": "metal",
+		"group": "unknown",
 		"position": 15,
 		"name": "Livermorium",
 		"number": 116,
@@ -1284,7 +1284,7 @@
 		]
 	},
 	{
-		"group": "halogen",
+		"group": "unknown",
 		"position": 16,
 		"name": "Ununseptium",
 		"number": 117,
@@ -1301,7 +1301,7 @@
 		]
 	},
 	{
-		"group": "noble-gas",
+		"group": "unknown",
 		"position": 17,
 		"name": "Ununoctium",
 		"number": 118,
@@ -1542,7 +1542,7 @@
 		]
 	},
 	{
-		"group": "Lanthanoid",
+		"group": "lanthanide",
 		"position": 16,
 		"name": "Lutetium",
 		"number": 71,
@@ -1796,7 +1796,7 @@
 		]
 	},
 	{
-		"group": "Actinoid",
+		"group": "actinide",
 		"position": 16,
 		"name": "Lawrencium",
 		"number": 103,
