@@ -24,8 +24,22 @@
     "tests"
   ],
   "dependencies": {
-    "babel": "*",
     "react": "^0.14.8",
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "font-awesome": "fontawesome#^4.6.0",
+    "babel": "*",
+    "requirejs": "^2.2.0"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    },
+    "babel": {
+      "main": [
+        "browser.min.js"
+      ]
+    }
   }
 }

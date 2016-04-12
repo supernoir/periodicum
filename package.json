@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/supernoir/periodicum#readme",
   "dependencies": {
-    "bulma": "0.0.16",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -41,6 +40,7 @@
     "jshint": "^2.9.1",
     "nano": "^6.2.0",
     "node": "0.0.0",
-    "tiny-lr": "^0.2.1"
+    "tiny-lr": "^0.2.1",
+    "wiredep": "^4.0.0"
   }
 }

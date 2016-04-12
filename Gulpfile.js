@@ -13,6 +13,24 @@ var gulp = require('gulp'),
 	lr = require('tiny-lr'),
 	server = lr();
 
+var wiredep = require('wiredep').stream;
+ 
+gulp.task('inject-scripts', function () {
+return gulp.src('app/*.js')
+        .pipe(wiredep({
+            ignorePath: /^(\.\.\/)*\.\./
+        }))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('inject-styles', function () {
+return gulp.src('app/*.css')  
+		.pipe(wiredep({
+          ignorePath: /^(\.\.\/)+/
+        }))
+		.pipe(gulp.dest('dist'));
+});
+
 // Server - listed on localhost:8080
 gulp.task('webserver', function() {
   connect.server();
@@ -66,4 +84,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['webserver','styles', 'scripts', 'watch']);
+gulp.task('default', ['webserver', 'inject-styles', 'inject-scripts', 'styles', 'scripts', 'watch']);
