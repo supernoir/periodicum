@@ -18,7 +18,7 @@ var wiredep = require('wiredep').stream;
 gulp.task('inject-scripts', function () {
 return gulp.src('app/*.js')
         .pipe(wiredep({
-            ignorePath: /^(\.\.\/)*\.\./
+           // ignorePath: /^(\.\.\/)*\.\./
         }))
         .pipe(gulp.dest('dist'));
 });
@@ -26,7 +26,7 @@ return gulp.src('app/*.js')
 gulp.task('inject-styles', function () {
 return gulp.src('app/*.css')  
 		.pipe(wiredep({
-          ignorePath: /^(\.\.\/)+/
+         // ignorePath: /^(\.\.\/)+/
         }))
 		.pipe(gulp.dest('dist'));
 });
@@ -37,7 +37,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('app/sass/main.scss')
+  return gulp.src('app/sass/*.scss')
 	.pipe(sass({ style: 'expanded' }))
 	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 	.pipe(gulp.dest('app/css'))

@@ -1,0 +1,65 @@
+@import 'main';
+// Single Page Views for Elements
+
+.element-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.element-header {
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.element-header-image {
+    border: 0px;
+    width: 220px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.element-header-content {
+    width: auto;
+    align-content: left;
+}
+
+.element-header-content h1 {
+    color: rgb(50,50,50);
+}
+
+.element-header-content h2 {
+    color: rgb(100,100,100);
+}
+
+#muted {
+    color: rgb(150,150,150);
+    font-weight: lighter;
+}
+
+.element-body p {
+    font-size: 1.0em;
+    line-height: 1.4em;
+    color: rgb(50,50,50);
+}
+
+.element-footer {
+    background: rgb(200,200,200);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.element-footer p {
+    font-weight: bold;
+    font-size: 0.6em;
+    line-height: 1.4em;
+    
+    //  
+    color: rgb(50,50,50);
+}
+
