@@ -5,16 +5,17 @@ $secondary-color: rgb(200,200,200);
 $tertiary-color: rgb(50,50,50);
 
 $alkali-metal: rgb(100,200,100);
-$alkaline-earth: rgb(50,200,250);
+$alkaline-earth-metal: rgb(50,200,250);
 $transition-metal: rgb(50,100,250);
+$post-transition-metal: rgb(50,150,150);
 $semi-metal: rgb(100,50,250);
-$non-metal: rgb(200,50,250);
-$basic-metal: rgb(50,150,150);
-$halogen: rgb(250,200,50);
+$polyatomic-nonmetal: rgb(200,50,250);
+$diatomic-nonmetal: rgb(250,200,50);
 $noble-gas: rgb(150,50,150);
 $lanthanide: rgb(250,100,50);
 $actinide: rgb(200,250,50);
 $metalloid: rgb(150,100,200);
+$unknown: rgb(128,128,128);
 
 //-- GENERAL
 html,
@@ -157,7 +158,9 @@ a.element {
     align-items: center;
     border: 1px solid #fff;
     box-shadow: 0px 2px 2px rgba(50,50,50,0.1);
+    text-decoration: none;
 }
+
 
 a.empty {
     background-color: inherit;
@@ -169,20 +172,28 @@ a.empty {
     height: 20px;
 }
 
-#alkaline-earth {
-    color: darken($alkaline-earth,20%);
+#alkaline-earth-metal {
+    color: darken($alkaline-earth-metal,20%);
 }
 
 #transition-metal {
     color: darken($transition-metal,20%);
 }
 
+#post-transition-metal {
+    color: darken($post-transition-metal,20%);
+}
+
 #alkali-metal{
     color: darken($alkali-metal,20%);
 }
 
-#non-metal{
-    color: darken($non-metal,20%);
+#polyatomic-nonmetal{
+    color: darken($polyatomic-nonmetal,20%);
+}
+
+#diatomic-nonmetal{
+    color: darken($diatomic-nonmetal,20%);
 }
 
 #noble-gas{
@@ -191,6 +202,18 @@ a.empty {
 
 #metalloid{
     color: darken($metalloid,20%);
+}
+
+#actinide{
+    color: darken($actinide,20%);
+}
+
+#lanthanide{
+    color: darken($lanthanide,20%);
+}
+
+#unknown{
+    color: darken($unknown,20%);
 }
 
 a:hover.element {
