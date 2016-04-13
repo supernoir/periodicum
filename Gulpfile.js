@@ -84,4 +84,8 @@ gulp.task('watch', function() {
 
 });
 
+<<<<<<< HEAD
+=======
+//gulp.task('default', ['webserver', 'inject-styles', 'inject-scripts', 'styles', 'scripts', 'watch']);
+>>>>>>> 87e0e6dfd5ed69afc5bfcc2d5d595fb6974e636c
 gulp.task('default', ['webserver', 'styles', 'scripts', 'watch']);

@@ -27,6 +27,10 @@
     "react": "^0.14.8",
     "jquery": "^2.2.2",
     "font-awesome": "fontawesome#^4.6.0",
+<<<<<<< HEAD
     "babel": "*"
+=======
+    "babel": "*",
+>>>>>>> 87e0e6dfd5ed69afc5bfcc2d5d595fb6974e636c
   }
 }
