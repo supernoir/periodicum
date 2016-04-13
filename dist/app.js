@@ -91,7 +91,7 @@ var ElementList = React.createClass({
 var Element = React.createClass({
   render: function() {
     return (
-      <a className="element" id="{this.props.group}">
+      <a className="element" id={this.props.group} href="single-element.html">
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
