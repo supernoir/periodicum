@@ -28,7 +28,5 @@
     "jquery": "^2.2.2",
     "font-awesome": "fontawesome#^4.6.0",
     "babel": "*",
-    "three.js": "threejs#*",
-    "bootstrap": "^3.3.6"
   }
 }
