@@ -1,1 +1,0 @@
-FROM periodicum/periodicum:latest

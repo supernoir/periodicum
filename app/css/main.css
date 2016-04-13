@@ -128,7 +128,8 @@ a.element {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid #fff;
-  box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.1); }
+  box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.1);
+  text-decoration: none; }
 
 a.empty {
   background-color: inherit;
@@ -138,23 +139,38 @@ a.empty {
 .spacer {
   height: 20px; }
 
-#alkaline-earth {
+#alkaline-earth-metal {
   color: #0592c1; }
 
 #transition-metal {
   color: #0534c1; }
 
+#post-transition-metal {
+  color: #194a4a; }
+
 #alkali-metal {
   color: #349234; }
 
-#non-metal {
+#polyatomic-nonmetal {
   color: #9205c1; }
+
+#diatomic-nonmetal {
+  color: #c19205; }
 
 #noble-gas {
   color: #4a194a; }
 
 #metalloid {
   color: #633492; }
+
+#actinide {
+  color: #92c105; }
+
+#lanthanide {
+  color: #c13405; }
+
+#unknown {
+  color: #4d4d4d; }
 
 a:hover.element {
   border: 1px solid white;
