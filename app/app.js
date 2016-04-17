@@ -25,9 +25,7 @@ var PeriodicTable = React.createClass({
   },
   render: function() {
     return (
-      <div className="periodicTable">
         <ElementList data={this.state.data} />
-      </div>
     );
   }
 });
