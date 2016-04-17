@@ -100,6 +100,9 @@ a:hover.button {
   margin: 5px 0px;
   min-width: 160px; }
 
+#input-radio {
+  display: none; }
+
 #filter-label {
   cursor: pointer;
   color: #646464; }
@@ -110,6 +113,14 @@ a:hover.button {
 #filter-label-all {
   font-weight: 500;
   cursor: pointer; }
+
+#input-radio:checked + #filter-label {
+  color: #3264c8;
+  font-weight: 800; }
+
+#input-radio:checked + #filter-label-all {
+  color: #3264c8;
+  font-weight: 800; }
 
 #hr-primary {
   border: 0px;

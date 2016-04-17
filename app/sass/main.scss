@@ -146,7 +146,9 @@ min-width: 160px;
 }
 
 #input-radio{
+display: none;
 }
+
 
 #filter-label{
     cursor: pointer;
@@ -160,6 +162,17 @@ min-width: 160px;
 #filter-label-all{
     font-weight: 500;
     cursor: pointer;
+}
+
+
+#input-radio:checked + #filter-label{
+    color: $primary-color;
+    font-weight: 800;
+}
+
+#input-radio:checked + #filter-label-all{
+    color: $primary-color;
+    font-weight: 800;
 }
 
 #hr-primary{
