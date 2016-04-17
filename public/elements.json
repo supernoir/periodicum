@@ -778,8 +778,8 @@
 		"group": "lanthanide",
 		"position": 2,
 		"name": "",
-		"number": "",
-		"symbol": "57-71"
+		"number": "57-71",
+		"symbol": ""
 	},
 	{
 		"group": "transition-metal",
@@ -1059,8 +1059,8 @@
 		"group": "actinide",
 		"position": 2,
 		"name": "",
-		"number": "",
-		"symbol": "89-103"
+		"number": "89-103",
+		"symbol": ""
 	},
 	{
 		"group": "transition-metal",

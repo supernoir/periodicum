@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,200,300,500);
 
 $primary-color: rgb(50,100,200);
+$complementary-color: rgb(200,50,100);
 $secondary-color: rgb(200,200,200);
 $tertiary-color: rgb(50,50,50);
 
@@ -26,7 +27,8 @@ body {
     padding: 0px;
     height: 100%;
     font-family: 'Alegreya Sans','Helvetica','Arial', sans-serif;
-    background: $secondary-color;
+    background: rgb(200,200,200);
+    
 }
 
 // -- HEADER
@@ -36,6 +38,7 @@ body {
     background: rgb(255,255,255);
     margin: 0px;
     padding: 5px 20px;
+    border-bottom: 5px solid $secondary-color;
 }
 
 #logo{
@@ -88,11 +91,11 @@ a.footer-link:hover{
     border-radius: 4px;
     background-color: rgba(255,255,255,0.6);
     padding: 24px 10px;
-    margin: 0px 20px 0px 0px;
+    margin: 0px 10px 0px 0px;
 }
 
 .periodic-table {
-    width: 1080px;
+    width: 1000px;
     border-radius: 4px;
     background-color: rgba(255,255,255,0.5);
     padding: 5px 0px 5px 5px;
@@ -126,12 +129,12 @@ a:hover.button{
 // RADIOBUTTONS
 
 .filter-form{
-
-padding: 0px 10px;
+    padding: 0px 5px;
     color: $primary-color;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    font-size: 0.9em;
 }
 
 .radio-group{
@@ -139,17 +142,24 @@ padding: 0px 10px;
 
 #radio-element{
 margin: 5px 0px;
-min-width: 180px;
+min-width: 160px;
 }
 
 #input-radio{
 }
 
 #filter-label{
+    cursor: pointer;
+    color: rgb(100,100,100);
+}
+
+#filter-label:hover{
+    color: $primary-color;
 }
 
 #filter-label-all{
     font-weight: 500;
+    cursor: pointer;
 }
 
 #hr-primary{
