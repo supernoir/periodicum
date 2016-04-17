@@ -18,12 +18,71 @@
     </header>
 
     <div class="container">
+        
       <div class="filter">
-        <a href="#" class="button">All Elements</a><form class="filter-form"><input type="checkbox" name="elementgroup" value="noble-gases" class="filter-input" id="element-filter" /><label for="element-filter" class="filter-input"><span class="checker"></span>Noble Gases</label></form>
+        <form class="filter-form">
+            <div id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label-all">All Elements</span>
+            </div>
+            <hr id="hr-primary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Noble Gases</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Alkali Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Alkaline Earth Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Transition Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Post-Transition Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Polyatomic Non-Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Diatomic Non-Metals</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Metalloids</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Actinides</span>
+            </label>
+            <hr id="hr-secondary">
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="filter-select" value="all">
+                <span id="filter-label">Lanthanides</span>
+            </label>
+        </form>
       </div>
 
       <div id="react-content"></div>
     </div>
+        <footer class="footer">
+        <p id="footer-body">&copy; 2016 -- <a href="#" class="footer-link">ConKat</a> -- Katrin Marschner and Conny Kawohl</p>
+    </footer>
     <!-- bower:js -->
     <script src="/bower_components/react/react.js"></script>
     <script src="/bower_components/react/react-dom.js"></script>

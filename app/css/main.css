@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,200,300,500);
 html,
 body {
   margin: 0px;
@@ -15,16 +15,58 @@ body {
 
 #logo {
   color: #3264c8;
-  font-weight: 300; }
+  font-weight: 500;
+  font-size: 2em; }
 
 #subhead {
   color: #c8c8c8;
   display: inline;
-  font-weight: 100; }
+  font-weight: 200;
+  font-size: inherit; }
+
+.footer {
+  width: 100%;
+  background: #323232;
+  padding: 5px 20px; }
+
+#footer-body {
+  color: #969696; }
+
+a.footer-link {
+  color: #969696;
+  text-decoration: none; }
+
+a.footer-link:hover {
+  color: white; }
+
+.container {
+  padding: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.filter {
+  width: 200px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 24px 10px;
+  margin: 0px 20px 0px 0px; }
+
+.periodic-table {
+  width: 1080px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 0px 5px 5px; }
 
 p {
   font-weight: 200;
-  font-size: 9px; }
+  font-size: 1em; }
 
 a.button {
   font-weight: 400;
@@ -39,10 +81,34 @@ a:hover.button {
   color: white;
   background: #3264c8; }
 
-form.filter-form {
-  display: inline;
+.filter-form {
+  padding: 0px 10px;
   color: #3264c8;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #3264c8; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+#radio-element {
+  margin: 5px 0px;
+  min-width: 180px; }
+
+#filter-label-all {
+  font-weight: 500; }
+
+#hr-primary {
+  border: 0px;
+  width: 100%;
+  border-bottom: 1px dashed #3264c8;
+  margin: 0px; }
+
+#hr-secondary {
+  border: 0px;
+  width: 100%;
+  border-bottom: 1px dashed #c8c8c8;
+  margin: 0px; }
