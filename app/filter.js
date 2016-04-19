@@ -1,26 +1,35 @@
 'use strict'
 
 var Filter = React.createClass({
+    allElementsClass: function(){  
+        $('.element').removeClass('mute-element');
+        $('.noble-gas').removeClass("noble-gas-highlighted");
+        $('.alkali-metal').removeClass("alkali-metal-highlighted");
         
-    unmuteClass: function(){
-        $('.element').addClass('mute-me');
-                
+    },    
+    nobleGasClass: function(){
+        $('.element').addClass('mute-element');
+        $('.noble-gas').toggleClass("noble-gas-highlighted");
+    },
+    alkaliMetalClass: function(){
+        $('.element').addClass('mute-element');
+        $('.alkali-metal').toggleClass("alkali-metal-highlighted");
     },
   render: function() {
     return (
 <form className="filter-form">
-            <div id="radio-element">
-                <input type="radio" id="input-radio" name="filter-select" value="all" />
+            <label id="radio-element">
+                <input type="radio" id="input-radio" name="all-elements" value="all" onClick={this.allElementsClass} />
                 <span id="filter-label-all">All Elements</span>
-            </div>
+            </label>
             <hr id="hr-primary" />
             <label id="radio-element">
-                <input type="radio" id="input-radio" name="filter-select" value="all" onClick={this.unmuteClass} />
+                <input type="radio" id="input-radio" name="noble-gas" value="all" onClick={this.nobleGasClass} />
                 <span id="filter-label">Noble Gases</span>
             </label>
             <hr id="hr-secondary" />
             <label id="radio-element">
-                <input type="radio" id="input-radio" name="filter-select" value="all" />
+                <input type="radio" id="input-radio" name="alkali-metal" value="all" onClick={this.alkaliMetalClass} />
                 <span id="filter-label">Alkali Metals</span>
             </label>
             <hr id="hr-secondary" />

@@ -134,6 +134,45 @@ a:hover.button {
   border-bottom: 1px dashed #c8c8c8;
   margin: 0px; }
 
-.mute-me {
-  background: blue !important;
-  border: 5px dashed red; }
+.mute-element {
+  color: #c8c8c8 !important; }
+
+.noble-gas-highlighted {
+  border: 1px solid #953295 !important;
+  color: #963296 !important; }
+
+.alkali-metal-highlighted {
+  border: 1px solid #63c863 !important;
+  color: #64c864 !important; }
+
+.alkaline-earth-metal-highlighted {
+  border: 1px solid #31c8fa !important;
+  color: #32c8fa !important; }
+
+.transition-metal-highlighted {
+  border: 1px solid #3163fa !important;
+  color: #3264fa !important; }
+
+.post-transition-metal-highlighted {
+  border: 1px solid #329595 !important;
+  color: #329696 !important; }
+
+.polyatomic-nonmetal-highlighted {
+  border: 1px solid #c831fa !important;
+  color: #c832fa !important; }
+
+.diatomic-nonmetal-highlighted {
+  border: 1px solid #fac831 !important;
+  color: #fac832 !important; }
+
+.metalloid-highlighted {
+  border: 1px solid #9563c8 !important;
+  color: #9664c8 !important; }
+
+.actinides-highlighted {
+  border: 1px solid #c8fa31 !important;
+  color: #c8fa32 !important; }
+
+.lanthanides-highlighted {
+  border: 1px solid #fa6331 !important;
+  color: #fa6432 !important; }
