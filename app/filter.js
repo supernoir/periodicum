@@ -1,6 +1,11 @@
 'use strict'
 
 var Filter = React.createClass({
+        
+    unmuteClass: function(){
+        $('.element').addClass('mute-me');
+                
+    },
   render: function() {
     return (
 <form className="filter-form">
@@ -10,7 +15,7 @@ var Filter = React.createClass({
             </div>
             <hr id="hr-primary" />
             <label id="radio-element">
-                <input type="radio" id="input-radio" name="filter-select" value="all" />
+                <input type="radio" id="input-radio" name="filter-select" value="all" onClick={this.unmuteClass} />
                 <span id="filter-label">Noble Gases</span>
             </label>
             <hr id="hr-secondary" />
@@ -67,4 +72,3 @@ ReactDOM.render(
   <Filter />,
   document.getElementById('filterComponent')
 );
-

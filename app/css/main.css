@@ -133,3 +133,7 @@ a:hover.button {
   width: 100%;
   border-bottom: 1px dashed #c8c8c8;
   margin: 0px; }
+
+.mute-me {
+  background: blue !important;
+  border: 5px dashed red; }
