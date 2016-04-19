@@ -24,7 +24,7 @@ return gulp.src('app/*.js')
 });
 
 gulp.task('inject-styles', function () {
-return gulp.src('app/*.css')  
+	return gulp.src('app/*.css')  
 		.pipe(wiredep({
          // ignorePath: /^(\.\.\/)+/
         }))
