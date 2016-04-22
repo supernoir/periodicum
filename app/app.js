@@ -59,41 +59,130 @@ var ElementList = React.createClass({
 
     return (
       <div className="periodic-table">
+        <div className="row zero">
+          <a className="element empty">
+            <p className="label">Group&#8594;</p>
+            <p className="label">Period&#8595;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">1</p>
+            <p className="label">IA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">2</p>
+            <p className="label">IIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">3</p>
+            <p className="label">IIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">4</p>
+            <p className="label">IVB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">5</p>
+            <p className="label">VB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">6</p>
+            <p className="label">VIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">7</p>
+            <p className="label">VIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">8</p>
+            <p className="label">&#x2500;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">9</p>
+            <p className="label">VIIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">10</p>
+            <p className="label">&#x2500;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">11</p>
+            <p className="label">IB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">12</p>
+            <p className="label">IIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">13</p>
+            <p className="label">IIIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">14</p>
+            <p className="label">IVA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">15</p>
+            <p className="label">VA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">16</p>
+            <p className="label">VIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">17</p>
+            <p className="label">VIIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">18</p>
+            <p className="label">VIIIA</p>
+          </a>
+        </div>
         <div className="row one">
+          <a className="element empty period">1</a>
           {elementNodes.slice(0,1)}
           {empty_fields.slice(0,16)}
           {elementNodes.slice(1,2)}
         </div>
         <div className="row two">
+          <a className="element empty period">2</a>
           {elementNodes.slice(2,4)}
           {empty_fields.slice(0,10)}
           {elementNodes.slice(4,10)}
         </div>
         <div className="row three">
+          <a className="element empty period">3</a>
           {elementNodes.slice(10,12)}
           {empty_fields.slice(0,10)}
           {elementNodes.slice(12,18)}
         </div>
         <div className="row four">
+          <a className="element empty period">4</a>
           {elementNodes.slice(18,36)}
         </div>
         <div className="row five">
+          <a className="element empty period">5</a>
           {elementNodes.slice(36,54)}
         </div>
         <div className="row six">
+          <a className="element empty period">6</a>
           {elementNodes.slice(54,57)}
           {elementNodes.slice(57,72)}
         </div>
         <div className="row seven">
+          <a className="element empty period">7</a>
           {elementNodes.slice(72,75)}
           {elementNodes.slice(75,90)}
         </div>
         <div className="spacer"></div>
         <div className="row lanthanide">
+          {empty_fields.slice(0,3)}
           {elementNodes.slice(90,105)}
+          {empty_fields.slice(0,1)}
         </div>
         <div className="row actinide">
+          {empty_fields.slice(0,3)}
           {elementNodes.slice(105)}
+          {empty_fields.slice(0,1)}
         </div>
       </div>
     );

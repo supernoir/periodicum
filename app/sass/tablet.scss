@@ -31,17 +31,18 @@ label.filter-input:before {
 
 
 p.symbol {
-    font-size: 22px;
-    height: 22px;
+    font-size: 18px;
+    height: 20px;
     font-weight: 600;
     margin: 4px 2px;
 }
 
 p.atomic-number {
-    font-size: 18px;
-    height: 18px;
+    font-size: 14px;
+    height: 16px;
     font-weight: 400;
     margin: 4px 2px;
+    color: $secondary-color;
 }
 
 p.name {
@@ -63,10 +64,6 @@ p.name {
     margin: 0 auto;
 }
 
-.symbol{}
-.atomic-number{
-    display: none;
-}
 .name{
     display: none;
 }
@@ -79,6 +76,7 @@ p.name {
 }
 
 a.element {
+
     box-sizing: border-box;
     border-radius: 2px;
     width: 40px;
@@ -99,7 +97,19 @@ a.empty {
     background-color: inherit;
     border: none;
     box-shadow: none;
-    visibility: hidden;
+    pointer-events: none;
+    cursor: default;
+    color: rgb(100,100,100);
+    font-size: 14px;
+}
+
+.period {
+    padding-top: 15px;
+}
+
+.label {
+    margin: 0;
+    padding-top: 8px;
 }
 
 .spacer {
