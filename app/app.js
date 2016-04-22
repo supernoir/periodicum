@@ -2,7 +2,7 @@
 
 var PeriodicTable = React.createClass({
   getInitialState: function() {
-    return {data: [], visible: 'index'};
+    return {data: [], element: [], visible: 'index'};
   },
   loadElementsFromServer: function() {
     $.ajax({
@@ -21,26 +21,32 @@ var PeriodicTable = React.createClass({
     this.loadElementsFromServer();
     setInterval(this.loadElementsFromServer, this.props.pollInterval);
   },
-  openSingleElement: function() {
-    this.setState({visible: 'element'});
+  openSingleElement: function(index) {
+    this.setState({visible: 'element', element: this.state.data[index]});
   },
   closeSingleElement: function() {
     this.setState({visible: 'index'});
   },
   render: function() {
     if (this.state.visible === 'index') {
-      return <ElementList data={this.state.data} openSingleElement={this.openSingleElement}/>
+      return <ElementList data={this.state.data} openSingleElement={this.openSingleElement} />
     } else {
-      return <SingleElement closeSingleElement={this.closeSingleElement}/>
+      return <SingleElement closeSingleElement={this.closeSingleElement} name={this.state.element.name}
+              symbol={this.state.element.symbol} group={this.state.element.group}
+              number={this.state.element.number} molar={this.state.element.molar}
+              text={this.state.element.text} img={this.state.element.img}
+              imgTitle={this.state.element.img_title} />
     }
   }
 });
 
 var ElementList = React.createClass({
   render: function() {
-    var elementNodes = this.props.data.map(function(element) {
+    var self = this;
+    var elementNodes = this.props.data.map(function(element, index) {
       return (
-        <Element group={element.group} symbol={element.symbol} number={element.number} name={element.name}>
+        <Element group={element.group} symbol={element.symbol} number={element.number}
+                 name={element.name} openSingleElement={self.props.openSingleElement.bind(self, index)}>
         </Element>
       );
     });
@@ -52,7 +58,7 @@ var ElementList = React.createClass({
     }
 
     return (
-      <div className="periodic-table" onClick={this.props.openSingleElement}>
+      <div className="periodic-table">
         <div className="row one">
           {elementNodes.slice(0,1)}
           {empty_fields.slice(0,16)}
@@ -97,7 +103,7 @@ var ElementList = React.createClass({
 var Element = React.createClass({
   render: function() {
     return (
-      <a className="element" id={this.props.group}>
+      <a className="element" id={this.props.group} onClick={this.props.openSingleElement}>
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
@@ -114,39 +120,39 @@ var SingleElement = React.createClass({
 </a>
         <div className="element-header">
           <div className="element-header-image">
-            <img src="img/xenon.jpg" className="element-image" />
+            <img src={this.props.img} className="element-image" />
+            <p className="element-image-label">{this.props.imgTitle}</p>
           </div>
           <div className="element-header-content">
-            <h1>Xenon</h1>
+            <h1>{this.props.name}</h1>
             <table className="element-table">
               <tbody>
                 <tr className="element-table-row">
                   <td className="element-table-cell-label">Symbol</td>
-                  <td className="element-table-cell">Xe</td>
+                  <td className="element-table-cell">{this.props.symbol}</td>
                 </tr>
                 <tr className="element-table-row">
                   <td className="element-table-cell-label">Group</td>
-                  <td className="element-table-cell">Noble Gas</td>
+                  <td className="element-table-cell">{this.props.group}</td>
                 </tr>
                 <tr className="element-table-row">
                   <td className="element-table-cell-label">Number</td>
-                  <td className="element-table-cell">54</td>
+                  <td className="element-table-cell">{this.props.number}</td>
                 </tr>
                 <tr className="element-table-row">
                   <td className="element-table-cell-label">Molar</td>
-                  <td className="element-table-cell">131.293</td>
+                  <td className="element-table-cell">{this.props.molar}</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div className="element-body">
-          <p>Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized. Xenon is used in flash lamps and arc lamps, and as a general anesthetic. Xenon is also being used to search for hypothetical weakly interacting massive particles and as the propellant for ion thrusters in spacecraft. Naturally occurring xenon consists of eight stable isotopes.</p>
+          <p>{this.props.text}</p>
         </div>
         <div className="element-footer">
           <p>
-            <a href="#" className="element-tag">Noble Gas</a>
-            <a href="#" className="element-tag">Flourescent</a>
+            <a href="#" className="element-tag">{this.props.group}</a>
           </p>
         </div>
       </div>

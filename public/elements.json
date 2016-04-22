@@ -740,7 +740,10 @@
 			18,
 			18,
 			8
-		]
+		],
+		"img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Xe_nanoparticles_in_Al.jpg/800px-Xe_nanoparticles_in_Al.jpg",
+		"img_title": "Liquid (featureless) and crystalline solid Xe nanoparticles produced by implanting Xe+ ions into aluminium at room temperature.",
+		"text": "Xenon is a chemical element with symbol Xe and atomic number 54. It is a colorless, dense, odorless noble gas, that occurs in the Earth's atmosphere in trace amounts. Although generally unreactive, xenon can undergo a few chemical reactions such as the formation of xenon hexafluoroplatinate, the first noble gas compound to be synthesized. Xenon is used in flash lamps and arc lamps, and as a general anesthetic. Xenon is also being used to search for hypothetical weakly interacting massive particles and as the propellant for ion thrusters in spacecraft. Naturally occurring xenon consists of eight stable isotopes."
 	},
   {
 		"group": "alkali-metal",
