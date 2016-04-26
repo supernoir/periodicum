@@ -62,7 +62,18 @@ a.empty {
     background-color: inherit;
     border: none;
     box-shadow: none;
-    visibility: hidden;
+    pointer-events: none;
+    cursor: default;
+    color: rgb(100,100,100);
+}
+
+.period {
+    padding-top: 15px;
+}
+
+.label {
+    margin: 0;
+    padding-top: 8px;
 }
 
 .spacer {

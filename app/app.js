@@ -1,10 +1,8 @@
 'use strict'
 
-//var Modal = require('react-modal');
-
 var PeriodicTable = React.createClass({
   getInitialState: function() {
-    return {data: []};
+    return {data: [], element: [], visible: 'index'};
   },
   loadElementsFromServer: function() {
     $.ajax({
@@ -23,18 +21,32 @@ var PeriodicTable = React.createClass({
     this.loadElementsFromServer();
     setInterval(this.loadElementsFromServer, this.props.pollInterval);
   },
+  openSingleElement: function(index) {
+    this.setState({visible: 'element', element: this.state.data[index]});
+  },
+  closeSingleElement: function() {
+    this.setState({visible: 'index'});
+  },
   render: function() {
-    return (
-        <ElementList data={this.state.data} />
-    );
+    if (this.state.visible === 'index') {
+      return <ElementList data={this.state.data} openSingleElement={this.openSingleElement} />
+    } else {
+      return <SingleElement closeSingleElement={this.closeSingleElement} name={this.state.element.name}
+              symbol={this.state.element.symbol} group={this.state.element.group}
+              number={this.state.element.number} molar={this.state.element.molar}
+              text={this.state.element.text} img={this.state.element.img}
+              imgTitle={this.state.element.img_title} />
+    }
   }
 });
 
 var ElementList = React.createClass({
   render: function() {
-    var elementNodes = this.props.data.map(function(element) {
+    var self = this;
+    var elementNodes = this.props.data.map(function(element, index) {
       return (
-        <Element group={element.group} symbol={element.symbol} number={element.number} name={element.name}>
+        <Element group={element.group} symbol={element.symbol} number={element.number}
+                 name={element.name} openSingleElement={self.props.openSingleElement.bind(self, index)}>
         </Element>
       );
     });
@@ -47,41 +59,130 @@ var ElementList = React.createClass({
 
     return (
       <div className="periodic-table">
+        <div className="row zero">
+          <a className="element empty">
+            <p className="label">Group&#8594;</p>
+            <p className="label">Period&#8595;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">1</p>
+            <p className="label">IA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">2</p>
+            <p className="label">IIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">3</p>
+            <p className="label">IIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">4</p>
+            <p className="label">IVB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">5</p>
+            <p className="label">VB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">6</p>
+            <p className="label">VIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">7</p>
+            <p className="label">VIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">8</p>
+            <p className="label">&#x2500;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">9</p>
+            <p className="label">VIIIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">10</p>
+            <p className="label">&#x2500;</p>
+          </a>
+          <a className="element empty">
+            <p className="label">11</p>
+            <p className="label">IB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">12</p>
+            <p className="label">IIB</p>
+          </a>
+          <a className="element empty">
+            <p className="label">13</p>
+            <p className="label">IIIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">14</p>
+            <p className="label">IVA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">15</p>
+            <p className="label">VA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">16</p>
+            <p className="label">VIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">17</p>
+            <p className="label">VIIA</p>
+          </a>
+          <a className="element empty">
+            <p className="label">18</p>
+            <p className="label">VIIIA</p>
+          </a>
+        </div>
         <div className="row one">
+          <a className="element empty period">1</a>
           {elementNodes.slice(0,1)}
           {empty_fields.slice(0,16)}
           {elementNodes.slice(1,2)}
         </div>
         <div className="row two">
+          <a className="element empty period">2</a>
           {elementNodes.slice(2,4)}
           {empty_fields.slice(0,10)}
           {elementNodes.slice(4,10)}
         </div>
         <div className="row three">
+          <a className="element empty period">3</a>
           {elementNodes.slice(10,12)}
           {empty_fields.slice(0,10)}
           {elementNodes.slice(12,18)}
         </div>
         <div className="row four">
+          <a className="element empty period">4</a>
           {elementNodes.slice(18,36)}
         </div>
         <div className="row five">
+          <a className="element empty period">5</a>
           {elementNodes.slice(36,54)}
         </div>
         <div className="row six">
+          <a className="element empty period">6</a>
           {elementNodes.slice(54,57)}
           {elementNodes.slice(57,72)}
         </div>
         <div className="row seven">
+          <a className="element empty period">7</a>
           {elementNodes.slice(72,75)}
           {elementNodes.slice(75,90)}
         </div>
         <div className="spacer"></div>
         <div className="row lanthanide">
+          {empty_fields.slice(0,3)}
           {elementNodes.slice(90,105)}
+          {empty_fields.slice(0,1)}
         </div>
         <div className="row actinide">
+          {empty_fields.slice(0,3)}
           {elementNodes.slice(105)}
+          {empty_fields.slice(0,1)}
         </div>
       </div>
     );
@@ -91,7 +192,7 @@ var ElementList = React.createClass({
 var Element = React.createClass({
   render: function() {
     return (
-      <a href="single-element.html" className="element" id={this.props.group}>
+      <a className="element" id={this.props.group} onClick={this.props.openSingleElement}>
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
@@ -100,45 +201,54 @@ var Element = React.createClass({
   }
 });
 
-// --- Modal
-
-var App = React.createClass({
-
-  getInitialState: function() {
-    return { modalIsOpen: false };
-  },
-
-  openModal: function() {
-    this.setState({modalIsOpen: true});
-  },
-
-  afterOpenModal: function() {
-    // references are now sync'd and can be accessed.
-    this.refs.subtitle.style.color = '#f00';
-  },
-
-  closeModal: function() {
-    this.setState({modalIsOpen: false});
-  },
-
+var SingleElement = React.createClass({
   render: function() {
     return (
-      <div>
-        <button onClick={this.openModal}>Open Modal</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles} >
-
-          <h2 ref="subtitle">Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-        </Modal>
+      <div className="single-element element-content">
+        <a onClick={this.props.closeSingleElement} className="close"><i className="fa fa-times" aria-hidden="true"></i>
+</a>
+        <div className="element-header">
+          <div className="element-header-image">
+            <img src={this.props.img} className="element-image" />
+            <p className="element-image-label">{this.props.imgTitle}</p>
+          </div>
+          <div className="element-header-content">
+            <h1>{this.props.name}</h1>
+            <table className="element-table">
+              <tbody>
+                <tr className="element-table-row">
+                  <td className="element-table-cell-label">Symbol</td>
+                  <td className="element-table-cell">{this.props.symbol}</td>
+                </tr>
+                <tr className="element-table-row">
+                  <td className="element-table-cell-label">Group</td>
+                  <td className="element-table-cell">{this.props.group}</td>
+                </tr>
+                <tr className="element-table-row">
+                  <td className="element-table-cell-label">Number</td>
+                  <td className="element-table-cell">{this.props.number}</td>
+                </tr>
+                <tr className="element-table-row">
+                  <td className="element-table-cell-label">Molar</td>
+                  <td className="element-table-cell">{this.props.molar}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="element-body">
+          <p>{this.props.text}</p>
+        </div>
+        <div className="element-footer">
+          <p>
+            <a href="#" className="element-tag">{this.props.group}</a>
+          </p>
+        </div>
       </div>
     );
   }
 });
+
 
 // Render DOM
 

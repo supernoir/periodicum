@@ -26,6 +26,11 @@
    width: 240px;
 }
 
+.element-image-label {
+    font-size: 12px;
+    color: rgb(100,100,100);
+}
+
 .element-header-content {
     width: 200px;
     flex-direction: column;
@@ -89,4 +94,10 @@ a.element-tag {
     width: 80px;
     color: rgb(200,200,200);
     border-bottom: 1px solid rgb(200,200,200);
+}
+
+a.close {
+    position: relative;
+    left: 470px;
+    color: lightgrey;
 }

@@ -27,7 +27,6 @@
     "react": "^0.14.8",
     "jquery": "^2.2.2",
     "font-awesome": "fontawesome#^4.6.0",
-    "babel": "*",
-    "react-modal": "^1.1.0"
+    "babel": "*"
   }
 }
