@@ -186,9 +186,14 @@ a:hover.button {
 
 
 // Filter -- Highlights & Mutes
+.searchComponent {
+    margin-bottom: 20px;
+    input {
+        width: 160px;
+    }
+}
 
 .mute-element {
-    //background: $secondary-color !important;
     color: $secondary-color !important;
 }
 
