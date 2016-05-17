@@ -188,11 +188,6 @@ display: none;
     width: 100%;
     border-bottom: 1px dashed $secondary-color;
     margin: 0px;
-    }
-
-.mute-me{
-    background: blue !important;
-    border: 5px dashed red;
 }
 
 
@@ -252,4 +247,3 @@ display: none;
     border: 1px solid darken($lanthanide,0.2) !important;
     color: $lanthanide !important;
 }
->>>>>>> adds element highlighted styles and react classes to handle the DOM manipulation
