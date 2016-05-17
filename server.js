@@ -7,7 +7,7 @@ var app = express();
 // --- Postgres
 var pg = require('pg');
 
-pg.defaults.ssl = true;
+pg.defaults.ssl = false;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
@@ -25,6 +25,8 @@ app.use(function (request, response, next) {
   response.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
   next();
 });
+
+
 
 
 
