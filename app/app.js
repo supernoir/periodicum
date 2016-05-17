@@ -2,7 +2,7 @@
 
 var PeriodicTable = React.createClass({
   getInitialState: function() {
-    return {data: [], element: [], visible: 'index', highlight: 'all-elements'};
+    return {data: [], element: [], visible: 'index', highlight: 'all-elements', search: ''};
   },
   loadElementsFromServer: function() {
     $.ajax({
@@ -30,12 +30,15 @@ var PeriodicTable = React.createClass({
   highlightElement: function(event) {
     this.setState({highlight: event.target.value})
   },
+  searchElement: function(event) {
+    this.setState({search: event.target.value})
+  },
   render: function() {
     if (this.state.visible === 'index') {
       return (
         <div className="container">
-          <Filter highlightElement={this.highlightElement}/>
-          <ElementList data={this.state.data} highlight={this.state.highlight} openSingleElement={this.openSingleElement} />
+          <Filter highlightElement={this.highlightElement} search={this.state.search} searchElement={this.searchElement}/>
+          <ElementList data={this.state.data} highlight={this.state.highlight} search={this.state.search} openSingleElement={this.openSingleElement} />
         </div>
       );
     } else {
@@ -54,7 +57,7 @@ var ElementList = React.createClass({
     var elementNodes = this.props.data.map(function(element, index) {
       return (
         <Element group={element.group} symbol={element.symbol} number={element.number}
-                 name={element.name} highlight={self.props.highlight} openSingleElement={self.props.openSingleElement.bind(self, index)}>
+                 name={element.name} highlight={self.props.highlight} search={self.props.search} openSingleElement={self.props.openSingleElement.bind(self, index)}>
         </Element>
       );
     });
@@ -206,8 +209,14 @@ var Element = React.createClass({
     } else {
       var highlight = "mute-element";
     }
+
+    if (this.props.search != '' && this.props.name.toLowerCase().search(this.props.search.toLowerCase()) !== -1) {
+      var search = this.props.group+"-highlighted";
+    } else {
+      var search = "";
+    }
     return (
-      <a className={"element "+this.props.group+ " "+highlight} onClick={this.props.openSingleElement}>
+      <a className={"element "+this.props.group+" "+highlight+" "+search} onClick={this.props.openSingleElement}>
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
@@ -271,6 +280,9 @@ var Filter = React.createClass({
   render: function() {
     return (
       <div className="filter">
+        <div className="searchComponent">
+          <input type="text" placeholder="Search Element" value={this.props.search} onChange={this.props.searchElement} />
+        </div>
         <div id="filterComponent">
           <form className="filter-form">
             <label id="radio-element">

@@ -134,6 +134,11 @@ a:hover.button {
   border-bottom: 1px dashed #c8c8c8;
   margin: 0px; }
 
+.searchComponent {
+  margin-bottom: 20px; }
+  .searchComponent input {
+    width: 160px; }
+
 .mute-element {
   color: #c8c8c8 !important; }
 
