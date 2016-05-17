@@ -4,7 +4,6 @@ $primary-color: rgb(50,100,200);
 $complementary-color: rgb(200,50,100);
 $secondary-color: rgb(200,200,200);
 $tertiary-color: rgb(50,50,50);
-
 $alkali-metal: rgb(100,200,100);
 $alkaline-earth-metal: rgb(50,200,250);
 $transition-metal: rgb(50,100,250);
@@ -28,12 +27,11 @@ body {
     height: 100%;
     font-family: 'Alegreya Sans','Helvetica','Arial', sans-serif;
     background: rgb(200,200,200);
-
 }
 
 // -- HEADER
 
-.header{
+.header {
     width: 100%;
     background: rgb(255,255,255);
     margin: 0px;
@@ -41,13 +39,13 @@ body {
     border-bottom: 5px solid $secondary-color;
 }
 
-#logo{
+#logo {
     color: $primary-color;
     font-weight: 500;
     font-size: 2em;
 }
 
-#subhead{
+#subhead {
     color: $secondary-color;
     display: inline;
     font-weight: 200;
@@ -56,24 +54,23 @@ body {
 
 // -- FOOTER
 
-.footer{
+.footer {
     width: 100%;
     background: $tertiary-color;
     padding: 5px 20px;
 }
 
-#footer-body{
+#footer-body {
     color: rgb(150,150,150);
 }
 
-a.footer-link{
+a.footer-link {
     color: rgb(150,150,150);
     text-decoration: none;
 }
 
-a.footer-link:hover{
+a.footer-link:hover {
     color: white;
-
 }
 
 
@@ -104,14 +101,13 @@ a.footer-link:hover{
 
 // -- TYPOGRAPHY
 
-
-p{
+p {
     font-weight: 200;
     font-size: 1em;
 }
 
 
-a.button{
+a.button {
     font-weight: 400;
     color: $primary-color;
     text-decoration: none;
@@ -121,14 +117,15 @@ a.button{
     border: 1px solid $primary-color;
 }
 
-a:hover.button{
+a:hover.button {
     color: white;
     background: $primary-color;
 }
 
+
 // RADIOBUTTONS
 
-.filter-form{
+.filter-form {
     padding: 0px 5px;
     color: $primary-color;
     display: flex;
@@ -137,53 +134,50 @@ a:hover.button{
     font-size: 0.9em;
 }
 
-.radio-group{
+#radio-element {
+    margin: 5px 0px;
+    min-width: 160px;
 }
 
-#radio-element{
-margin: 5px 0px;
-min-width: 160px;
-}
-
-#input-radio{
-display: none;
+#input-radio {
+    display: none;
 }
 
 
-#filter-label{
+#filter-label {
     cursor: pointer;
     color: rgb(100,100,100);
 }
 
-#filter-label:hover{
+#filter-label:hover {
     color: $primary-color;
 }
 
-#filter-label-all{
+#filter-label-all {
     font-weight: 500;
     cursor: pointer;
 }
 
 
-#input-radio:checked + #filter-label{
+#input-radio:checked + #filter-label {
     color: $primary-color;
     font-weight: 800;
 }
 
 
-#input-radio:checked + #filter-label-all{
+#input-radio:checked + #filter-label-all {
     color: $primary-color;
     font-weight: 800;
 }
 
-#hr-primary{
+#hr-primary {
     border: 0px;
     width: 100%;
     border-bottom: 1px dashed $primary-color;
     margin: 0px;
-    }
+}
 
-#hr-secondary{
+#hr-secondary {
     border: 0px;
     width: 100%;
     border-bottom: 1px dashed $secondary-color;
@@ -193,57 +187,57 @@ display: none;
 
 // Filter -- Highlights & Mutes
 
-.mute-element{
+.mute-element {
     //background: $secondary-color !important;
     color: $secondary-color !important;
 }
 
-.noble-gas-highlighted{
+.noble-gas-highlighted {
     border: 1px solid darken($noble-gas,0.2) !important;
     color: $noble-gas !important;
 }
 
-.alkali-metal-highlighted{
+.alkali-metal-highlighted {
     border: 1px solid darken($alkali-metal,0.2) !important;
     color: $alkali-metal !important;
 }
 
-.alkaline-earth-metal-highlighted{
+.alkaline-earth-metal-highlighted {
     border: 1px solid darken($alkaline-earth-metal,0.2) !important;
     color: $alkaline-earth-metal !important;
 }
 
-.transition-metal-highlighted{
+.transition-metal-highlighted {
     border: 1px solid darken($transition-metal,0.2) !important;
     color: $transition-metal !important;
 }
 
-.post-transition-metal-highlighted{
+.post-transition-metal-highlighted {
     border: 1px solid darken($post-transition-metal,0.2) !important;
     color: $post-transition-metal !important;
 }
 
-.polyatomic-nonmetal-highlighted{
+.polyatomic-nonmetal-highlighted {
     border: 1px solid darken($polyatomic-nonmetal,0.2) !important;
     color: $polyatomic-nonmetal !important;
 }
 
-.diatomic-nonmetal-highlighted{
+.diatomic-nonmetal-highlighted {
     border: 1px solid darken($diatomic-nonmetal,0.2) !important;
     color: $diatomic-nonmetal !important;
 }
 
-.metalloid-highlighted{
+.metalloid-highlighted {
     border: 1px solid darken($metalloid,0.2) !important;
     color: $metalloid !important;
 }
 
-.actinides-highlighted{
+.actinides-highlighted {
     border: 1px solid darken($actinide,0.2) !important;
     color: $actinide !important;
 }
 
-.lanthanides-highlighted{
+.lanthanides-highlighted {
     border: 1px solid darken($lanthanide,0.2) !important;
     color: $lanthanide !important;
 }
