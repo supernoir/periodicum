@@ -1,5 +1,7 @@
 'use strict'
 
+//var Modal = require('react-modal');
+
 var PeriodicTable = React.createClass({
   getInitialState: function() {
     return {data: []};
@@ -23,9 +25,7 @@ var PeriodicTable = React.createClass({
   },
   render: function() {
     return (
-      <div className="periodicTable">
         <ElementList data={this.state.data} />
-      </div>
     );
   }
 });
@@ -91,7 +91,7 @@ var ElementList = React.createClass({
 var Element = React.createClass({
   render: function() {
     return (
-      <a className="element" id={this.props.group} href="single-element.html">
+      <a href="single-element.html" className={"element "+this.props.group}>
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
@@ -99,6 +99,48 @@ var Element = React.createClass({
     );
   }
 });
+
+// --- Modal
+
+var App = React.createClass({
+
+  getInitialState: function() {
+    return { modalIsOpen: false };
+  },
+
+  openModal: function() {
+    this.setState({modalIsOpen: true});
+  },
+
+  afterOpenModal: function() {
+    // references are now sync'd and can be accessed.
+    this.refs.subtitle.style.color = '#f00';
+  },
+
+  closeModal: function() {
+    this.setState({modalIsOpen: false});
+  },
+
+  render: function() {
+    return (
+      <div>
+        <button onClick={this.openModal}>Open Modal</button>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles} >
+
+          <h2 ref="subtitle">Hello</h2>
+          <button onClick={this.closeModal}>close</button>
+          <div>I am a modal</div>
+        </Modal>
+      </div>
+    );
+  }
+});
+
+// Render DOM
 
 ReactDOM.render(
   <PeriodicTable url="http://localhost:8787/public/elements.json" pollInterval={5000} />,

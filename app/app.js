@@ -2,7 +2,7 @@
 
 var PeriodicTable = React.createClass({
   getInitialState: function() {
-    return {data: [], element: [], visible: 'index'};
+    return {data: [], element: [], visible: 'index', highlight: 'all-elements'};
   },
   loadElementsFromServer: function() {
     $.ajax({
@@ -27,9 +27,17 @@ var PeriodicTable = React.createClass({
   closeSingleElement: function() {
     this.setState({visible: 'index'});
   },
+  highlightElement: function(event) {
+    this.setState({highlight: event.target.value})
+  },
   render: function() {
     if (this.state.visible === 'index') {
-      return <ElementList data={this.state.data} openSingleElement={this.openSingleElement} />
+      return (
+        <div className="container">
+          <Filter highlightElement={this.highlightElement}/>
+          <ElementList data={this.state.data} highlight={this.state.highlight} openSingleElement={this.openSingleElement} />
+        </div>
+      );
     } else {
       return <SingleElement closeSingleElement={this.closeSingleElement} name={this.state.element.name}
               symbol={this.state.element.symbol} group={this.state.element.group}
@@ -46,7 +54,7 @@ var ElementList = React.createClass({
     var elementNodes = this.props.data.map(function(element, index) {
       return (
         <Element group={element.group} symbol={element.symbol} number={element.number}
-                 name={element.name} openSingleElement={self.props.openSingleElement.bind(self, index)}>
+                 name={element.name} highlight={self.props.highlight} openSingleElement={self.props.openSingleElement.bind(self, index)}>
         </Element>
       );
     });
@@ -191,8 +199,15 @@ var ElementList = React.createClass({
 
 var Element = React.createClass({
   render: function() {
+    if (this.props.highlight === "all-elements") {
+      var highlight = "";
+    } else if (this.props.group === this.props.highlight) {
+      var highlight = this.props.group+"-highlighted";
+    } else {
+      var highlight = "mute-element";
+    }
     return (
-      <a className="element" id={this.props.group} onClick={this.props.openSingleElement}>
+      <a className={"element "+this.props.group+ " "+highlight} onClick={this.props.openSingleElement}>
         <p className="symbol">{this.props.symbol}</p>
         <p className="atomic-number">{this.props.number}</p>
         <p className="name">{this.props.name}</p>
@@ -243,6 +258,76 @@ var SingleElement = React.createClass({
           <p>
             <a href="#" className="element-tag">{this.props.group}</a>
           </p>
+        </div>
+      </div>
+    );
+  }
+});
+
+
+// Filter
+
+var Filter = React.createClass({
+  render: function() {
+    return (
+      <div className="filter">
+        <div id="filterComponent">
+          <form className="filter-form">
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="all-elements" onChange={this.props.highlightElement}/>
+              <span id="filter-label-all">All Elements</span>
+            </label>
+            <hr id="hr-primary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="noble-gas" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Noble Gases</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="alkali-metal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Alkali Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="alkaline-earth-metal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Alkaline Earth Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="transition-metal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Transition Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="post-transition-metal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Post-Transition Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="polyatomic-nonmetal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Polyatomic Non-Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="diatomic-nonmetal" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Diatomic Non-Metals</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="metalloid" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Metalloids</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="lanthanide" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Lanthanides</span>
+            </label>
+            <hr id="hr-secondary" />
+            <label id="radio-element">
+              <input type="radio" id="input-radio" name="filter-select" value="actinide" onChange={this.props.highlightElement}/>
+              <span id="filter-label">Actinides</span>
+            </label>
+          </form>
         </div>
       </div>
     );

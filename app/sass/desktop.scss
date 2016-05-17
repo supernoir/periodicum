@@ -80,48 +80,46 @@ a.empty {
     height: 20px;
 }
 
-#alkaline-earth-metal {
+.alkaline-earth-metal {
     color: darken($alkaline-earth-metal,20%);
 }
 
-#transition-metal {
+.transition-metal {
     color: darken($transition-metal,20%);
 }
 
-#post-transition-metal {
+.post-transition-metal {
     color: darken($post-transition-metal,20%);
 }
 
-#alkali-metal{
+.alkali-metal{
     color: darken($alkali-metal,20%);
 }
 
-#polyatomic-nonmetal{
+.polyatomic-nonmetal{
     color: darken($polyatomic-nonmetal,20%);
 }
 
-#diatomic-nonmetal{
+.diatomic-nonmetal{
     color: darken($diatomic-nonmetal,20%);
 }
 
-#noble-gas{
+.noble-gas{
     color: darken($noble-gas,20%);
 }
 
-#metalloid{
+.metalloid{
     color: darken($metalloid,20%);
 }
 
-#actinide{
+.actinide{
     color: darken($actinide,20%);
 }
 
-#lanthanide{
+.lanthanide{
     color: darken($lanthanide,20%);
 }
 
-#unknown{
+.unknown{
     color: darken($unknown,20%);
 }
-
-
