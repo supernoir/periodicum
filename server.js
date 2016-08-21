@@ -27,6 +27,7 @@ app.use(function (request, response, next) {
 });
 
 app.use('/public', express.static(process.cwd() + '/public'));
+app.use('/', express.static(__dirname + '/'));
 
 
 // --- Listening
