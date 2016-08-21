@@ -32,9 +32,9 @@ gulp.task('inject-styles', function () {
 });
 
 // Server - listed on localhost:8080
-gulp.task('webserver', function() {
+/*gulp.task('webserver', function() {
   connect.server();
-});
+});*/
 
 gulp.task('styles', function() {
   return gulp.src('app/sass/*.scss')
@@ -93,4 +93,4 @@ gulp.task('serveprod', function() {
 });
 
 //gulp.task('default', ['webserver', 'inject-styles', 'inject-scripts', 'styles', 'scripts', 'watch']);
-gulp.task('default', ['webserver', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['serveprod', 'styles', 'scripts', 'watch']);

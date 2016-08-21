@@ -4,6 +4,8 @@
   "description": "Interactive Periodic Table App... thingy",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
+    "postinstall": "gulp default",
     "test": "mocha"
   },
   "repository": {
