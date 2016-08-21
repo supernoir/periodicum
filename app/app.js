@@ -350,6 +350,6 @@ var Filter = React.createClass({
 // Render DOM
 
 ReactDOM.render(
-  <PeriodicTable url="http://localhost:8787/public/elements.json" pollInterval={5000} />,
+  <PeriodicTable url="/public/elements.json" pollInterval={5000} />,
   document.getElementById('react-content')
 );
