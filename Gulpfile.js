@@ -63,12 +63,12 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('serveprod', function() {
+gulp.task('production', function() {
   connect.server({
-    root: '/',
-    port: process.env.PORT || 7878,
+    root: './app',
+    port: process.env.PORT,
   });
 });
 
 //gulp.task('default', ['webserver', 'inject-styles', 'inject-scripts', 'styles', 'scripts', 'watch']);
-gulp.task('default', ['serveprod', 'styles', 'scripts']);
+gulp.task('default', ['production', 'styles', 'scripts']);
