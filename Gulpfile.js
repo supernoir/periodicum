@@ -87,10 +87,10 @@ gulp.task('watch', function() {
 gulp.task('serveprod', function() {
   connect.server({
     root: '/',
-    port: process.env.PORT || 5000, // localhost:5000
+    port: process.env.PORT || 7878,
     livereload: false
   });
 });
 
 //gulp.task('default', ['webserver', 'inject-styles', 'inject-scripts', 'styles', 'scripts', 'watch']);
-gulp.task('default', ['serveprod', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['serveprod', 'styles', 'scripts']);
