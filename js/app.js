@@ -229,8 +229,7 @@ var SingleElement = React.createClass({
   render: function() {
     return (
       <div className="single-element element-content">
-        <a onClick={this.props.closeSingleElement} className="close"><i className="fa fa-times" aria-hidden="true"></i>
-</a>
+        <a onClick={this.props.closeSingleElement} className="close">X</a>
         <div className="element-header">
           <div className="element-header-image">
             <img src={this.props.img} className="element-image" />
